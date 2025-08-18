@@ -7,8 +7,8 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // |  1  |  3  |
-            // |  2  |  4  |
+#             |  1  |  3  |
+#             |  2  |  4  |
 
         	bindings = <
             &kp N1 &kp E
@@ -17,8 +17,8 @@
         };
 
         layer2 {
-            // |  Q  |  E  |
-            // |  W  |  R  |
+#             |  Q  |  E  |
+#             |  W  |  R  |
 
         	bindings = <
             &kp Q &kp E

@@ -1,9 +1,8 @@
 file_format: "1"
 id: 5keys_v2
-name: 5keys_v2
+name: 5KEYS_V2
 type: shield
-url: https://github.com/onikubimi/zmk-config
-requires:
-  - pro_micro
+url: https://github.com/onikubimi/5keys_v2-zmk-config
+requires: [pro_micro]
 features:
   - keys

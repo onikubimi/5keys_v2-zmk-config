@@ -1,35 +1,38 @@
-#include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "5keys_v2.dtsi"
+
+&physical_layout0 {
+    transform = <&matrix_transform>;
+};
 
 / {
     chosen {
-        zmk,kscan = &default_kscan;
-        zmk,matrix_transform = &default_transform;
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &physical_layout0;
     };
 
-    default_kscan: kscan {
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "default_kscan";
+        label = "KSCAN";
         diode-direction = "col2row";
-
-        col-gpios
-               = <&pro_micro 9 GPIO_ACTIVE_HIGH> // Col_0 106/D9 
-               , <&pro_micro 7 GPIO_ACTIVE_HIGH> // Col_1 011/D7
-               ;
 
         row-gpios
                = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row_0 009/D10
                , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row_1 111/D14
-               ;
+        
+        col-gpios
+               = <&pro_micro 9 GPIO_ACTIVE_HIGH> // Col_0 106/D9 
+               , <&pro_micro 7 GPIO_ACTIVE_HIGH> // Col_1 011/D7
     };
 
-    default_transform: matrix_transform {
+    matrix_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <2>;
         rows = <2>;
+        
         map = <
-                RC(0,0) RC(0,1)
-                RC(1,0) RC(1,1)
-              >;
+            RC(0,0) RC(0,1)
+            RC(1,0) RC(1,1)
+        >;
     };
 };

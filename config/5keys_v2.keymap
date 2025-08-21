@@ -11,13 +11,5 @@
             &kp N1 &kp N2 &kp Q &kp W
             >;
         };
-
-        layer2 {
-        	bindings = <
-            &kp Q &kp E
-            &kp W &kp R
-            >;
-        };
-
     };
 };

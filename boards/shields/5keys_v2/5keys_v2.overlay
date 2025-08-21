@@ -1,14 +1,10 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "5keys_v2.dtsi"
 
-&physical_layout0 {
-    transform = <&matrix_transform>;
-};
-
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &physical_layout0;
+        zmk,matrix-transform = &default_transform;
     };
 
     kscan0: kscan {
@@ -25,7 +21,7 @@
                  <&pro_micro 7 GPIO_ACTIVE_HIGH>; // Col_1 011/D7
     };
 
-    matrix_transform: keymap_transform_0 {
+    default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <2>;
         rows = <2>;

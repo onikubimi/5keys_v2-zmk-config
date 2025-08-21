@@ -1,7 +1,6 @@
 {
   "layouts": {
-    "default_layout": {
-    "name": "default_layout",
+    "LAYOUT": {
       "layout": [
         { "row": 0, "col": 0, "x":0, "y":0 },
         { "row": 1, "col": 0, "x":1, "y":0 },

@@ -1,0 +1,6 @@
+if SHIELD_APOLLO32
+
+config ZMK_KEYBOARD_NAME
+    default "apollo32"
+
+endif

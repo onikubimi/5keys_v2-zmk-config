@@ -1,0 +1,9 @@
+---
+file_format: "1"
+id: apollo32
+name: apollo32
+type: shield
+url: https://github.com/onikubimi/zmk-config-apollo32
+requires: [nice_nano_v2]
+exposes: []
+features: [keys]
